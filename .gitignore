@@ -1,4 +1,8 @@
 bin
+Tutorium-PG2-Java-master
+*.class
+.metadata
+.recommenders
 .settings
 .classpath
 .project
