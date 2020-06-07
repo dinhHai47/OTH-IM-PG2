@@ -1,0 +1,12 @@
+Charpter 1:
+- Added a simple "Hello World" for testing java in the terminal
+- Added Exercise as docx and pdf
+
+Charpter 2:
+- Replaced all float type with double, cause it´s more recommended
+- Added Exercises as docx and pdf
+
+Charpter 3:
+- Rewrote convert-Method of 3_1
+- Extended 3_3
+- Added Exercises as docx and pdf
