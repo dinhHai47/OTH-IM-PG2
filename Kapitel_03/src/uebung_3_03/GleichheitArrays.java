@@ -1,4 +1,4 @@
-package uebung_3_3;
+package uebung_3_03;
 
 public class GleichheitArrays {
     public static void main(String[] args) {

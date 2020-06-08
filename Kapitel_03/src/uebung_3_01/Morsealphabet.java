@@ -1,4 +1,4 @@
-package uebung_3_1;
+package uebung_3_01;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package uebung_3_2;
+package uebung_3_02;
 
 import java.util.Scanner;
 
@@ -12,12 +12,15 @@ public class Schleife {
         while ((max = sc.nextInt()) < 0) {
         	System.out.println("Bitte eine positive Zahl eingeben: ");
         }
-
+        //needs to be put after each sc.nextInt() or similar because these methods do not read the \n
+        sc.nextLine();
+        
         // read "div"
         System.out.println("div: ");
         while ((div = sc.nextInt()) < 0) {
         	System.out.println("Bitte eine positive Zahl eingeben: ");
         }
+        sc.nextLine();
         sc.close();
         
         System.out.println("--- Ergebnis ---");
