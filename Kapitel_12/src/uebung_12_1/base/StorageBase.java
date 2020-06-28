@@ -1,0 +1,14 @@
+package uebung_12_1.base;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class StorageBase {
+	
+	protected static StorageBase storageObject = null;
+	protected List<MyItem> storage = new ArrayList<>();
+
+	public abstract void deliver(MyItem item, String name);
+	public abstract void fetch(int randomInteger, String name);
+	public abstract int getStorageCount();
+}
