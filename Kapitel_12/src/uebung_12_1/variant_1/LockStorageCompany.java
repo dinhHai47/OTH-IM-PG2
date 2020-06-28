@@ -3,6 +3,7 @@ package uebung_12_1.variant_1;
 import uebung_12_1.base.Collector;
 import uebung_12_1.base.Supplier;
 
+//This class contains the main-method and starts all threads.
 public class LockStorageCompany {
 	
 	public static void main(String[] args) {

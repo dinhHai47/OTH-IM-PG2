@@ -5,12 +5,15 @@ import uebung_12_1.base.MyItem;
 import uebung_12_1.base.StorageBase;
 import uebung_12_1.variant_2.SynchronizedStorage;
 
+//This class is the implementation of the storage by using synchronized
 public class SynchronizedStorage extends StorageBase implements ControlConstants {
 
+	//Singleton constructor
 	private SynchronizedStorage() {
 
 	}
 	
+	//Implementation for the Singleton. Returns the Storage object. If not created yet, a new Storage is created and returned.
 	public static SynchronizedStorage getInstance() {
 		if(storageObject == null) {
 			storageObject = new SynchronizedStorage();
@@ -18,6 +21,12 @@ public class SynchronizedStorage extends StorageBase implements ControlConstants
 		return (SynchronizedStorage) storageObject;
 	}
 
+	/*
+	 * The method to store an item in the storage. Synchronized in the method signature shows, that only one object can use it at the same time.
+	 * As long as the storage is full, we wait until an other thread calls notify().
+	 * After that, the item is put in the storage and all other threads are told, that something has changed by calling notifyAll().
+	 * @see uebung_12_1.base.StorageBase#deliver(uebung_12_1.base.MyItem, java.lang.String)
+	 */
 	public synchronized void deliver(MyItem item, String name) {
 		try {
 			while (storage.size() >= MAX_STORAGE_SIZE) {
@@ -32,6 +41,12 @@ public class SynchronizedStorage extends StorageBase implements ControlConstants
 		}
 	}
 
+	/*
+	 * The method to get an item from the storage. Synchronized in the method signature shows, that only one object can use it at the same time.
+	 * As long as the storage is empty, we wait until an other thread calls notify().
+	 * After that, the item removed from the storage and all other threads are told, that something has changed by calling notifyAll().
+	 * @see uebung_12_1.base.StorageBase#fetch(int, java.lang.String)
+	 */
 	public synchronized void fetch(int position, String name) {
 		try {
 			while (storage.size() == 0) {
@@ -47,6 +62,7 @@ public class SynchronizedStorage extends StorageBase implements ControlConstants
 		}
 	}
 	
+	//returns the current size of the storage
 	public int getStorageCount() {
 		return storage.size();
 	}

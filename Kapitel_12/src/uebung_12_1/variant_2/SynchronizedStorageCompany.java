@@ -4,6 +4,7 @@ import uebung_12_1.base.Collector;
 import uebung_12_1.base.Supplier;
 import uebung_12_1.variant_2.SynchronizedStorage;
 
+//This class contains the main-method and starts all threads.
 public class SynchronizedStorageCompany {
 
 	public static void main(String[] args) {

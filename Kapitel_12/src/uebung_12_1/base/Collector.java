@@ -1,6 +1,7 @@
 package uebung_12_1.base;
 
 import java.util.concurrent.TimeUnit;
+//This class represents a Collector.
 
 public class Collector implements Runnable, ControlConstants{
 	StorageBase storage;
@@ -11,6 +12,11 @@ public class Collector implements Runnable, ControlConstants{
 		this.name = name;
 	}
 
+	/*
+	 * In each iteration a random number is calculated. This is the position from where the item from the storage is taken.
+	 * When the action was successful, a random time + the constant is waited for the next run.
+	 * @see java.lang.Runnable#run()
+	 */
 	@Override
 	public void run() {
 		try {

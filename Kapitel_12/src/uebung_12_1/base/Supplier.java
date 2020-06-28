@@ -3,6 +3,7 @@ package uebung_12_1.base;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+//This class represents a Supplier
 public class Supplier implements Runnable, ControlConstants {
 	StorageBase storage;
 	String name;
@@ -12,6 +13,11 @@ public class Supplier implements Runnable, ControlConstants {
 		this.name = name;
 	}
 
+	/*
+	 * In each iteration a random number is calculated. This is the id for the new Item.
+	 * When the action was successful, a random time + the constant is waited for the next run.
+	 * @see java.lang.Runnable#run()
+	 */
 	@Override
 	public void run() {
 		try {

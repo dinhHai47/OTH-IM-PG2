@@ -3,6 +3,7 @@ package uebung_12_1.base;
 import java.util.ArrayList;
 import java.util.List;
 
+//Base class for both of the storage variants. Contains an attribute for the storage object because of the singleton implementation
 public abstract class StorageBase {
 	
 	protected static StorageBase storageObject = null;

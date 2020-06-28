@@ -1,5 +1,6 @@
 package uebung_12_1.base;
 
+//This class represents an item, that can be stored in the storage
 public class MyItem {
 	private int id;
 	private String name;
