@@ -38,14 +38,16 @@ public class Roulette {
 					playerMoney += bet * 2;
 					playerWon = true;
 				}
-			} else if (choice.equals("s")) {
+			}
+			else if (choice.equals("s")) {
 				// Wenn ungerade Zahl, dann schwarz
 				if (random % 2 != 0 && random != 0) {
 					System.out.println("   " + random + " - Schwarz gewinnt, Glueckwunsch");
 					playerMoney += bet * 2;
 					playerWon = true;
 				}
-			} else {
+			}
+			else {
 				int number = Integer.valueOf(choice);
 				if (number >= 0 && number <= 36) {
 					if (random == Integer.valueOf(choice)) {

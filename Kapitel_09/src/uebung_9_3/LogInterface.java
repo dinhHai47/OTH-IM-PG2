@@ -1,18 +1,15 @@
 package uebung_9_3;
 
-
-
-public interface LogInterface
-{
-	public enum LogLevel{
+public interface LogInterface {
+	public enum LogLevel {
 		DEBUG, WARN, ERROR
 	}
-	
-    void setLogLevel(LogLevel level);
 
-    void error(String msg);
+	void setLogLevel(LogLevel level);
 
-    void warning(String msg);
+	void error(String msg);
 
-    void debug(String msg);
+	void warning(String msg);
+
+	void debug(String msg);
 }

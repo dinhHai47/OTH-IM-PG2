@@ -14,8 +14,10 @@ public class Supplier implements Runnable, ControlConstants {
 	}
 
 	/*
-	 * In each iteration a random number is calculated. This is the id for the new Item.
-	 * When the action was successful, a random time + the constant is waited for the next run.
+	 * In each iteration a random number is calculated. This is the id for the new
+	 * Item. When the action was successful, a random time + the constant is waited
+	 * for the next run.
+	 * 
 	 * @see java.lang.Runnable#run()
 	 */
 	@Override
@@ -27,7 +29,8 @@ public class Supplier implements Runnable, ControlConstants {
 				this.storage.deliver(item, this.name);
 				TimeUnit.MILLISECONDS.sleep(random.nextInt(2000) + 1 + MIN_DELIVER_TIME);
 			}
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}

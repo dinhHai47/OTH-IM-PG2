@@ -16,7 +16,8 @@ public class VirtualPub {
 
 			customer.drink(drink);
 
-		} else {
+		}
+		else {
 			// The storage is empty
 			throw new StorageEmpty("Lager leer!");
 		}

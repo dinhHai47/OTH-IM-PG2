@@ -29,7 +29,6 @@ public class DayOfWeek {
 		greCal.set(Calendar.MONTH, month - 1); // MONTH starts at 0 in Java (Januar = 0, Februar = 1, ...)
 		greCal.set(Calendar.YEAR, year);
 
-		System.out.println("Der " + day + "." + month + "." + year + " war ein "
-				+ greCal.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG_FORMAT, Locale.getDefault()));
+		System.out.println("Der " + day + "." + month + "." + year + " war ein " + greCal.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG_FORMAT, Locale.getDefault()));
 	}
 }

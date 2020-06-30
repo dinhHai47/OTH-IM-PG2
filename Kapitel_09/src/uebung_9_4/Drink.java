@@ -15,7 +15,6 @@ public class Drink {
 		return this.currentTemperature;
 	}
 
-
 	public int getPerfektTemperature() {
 		return this.perfectTemperature;
 	}

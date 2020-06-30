@@ -6,11 +6,9 @@ public class CaesarCipher {
 	Pattern asciiPattern = Pattern.compile("[a-zA-Z]+");
 	Pattern uppercasePattern = Pattern.compile(".*[A-Z].*");
 
-	public String encryptAlternative1(String text, int key)
-			throws IllegalCapitalLetterException, InvalidCharacterException {
+	public String encryptAlternative1(String text, int key) throws IllegalCapitalLetterException, InvalidCharacterException {
 		String output = "";
-		
-		
+
 		if (!asciiPattern.matcher(text).matches()) {
 			throw new InvalidCharacterException("Invalid character in " + text);
 		}
@@ -27,8 +25,7 @@ public class CaesarCipher {
 		return output;
 	}
 
-	public String decryptAlternative1(String text, int key)
-			throws IllegalCapitalLetterException, InvalidCharacterException {
+	public String decryptAlternative1(String text, int key) throws IllegalCapitalLetterException, InvalidCharacterException {
 		String output = "";
 
 		if (!asciiPattern.matcher(text).matches()) {
