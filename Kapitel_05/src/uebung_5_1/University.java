@@ -79,18 +79,105 @@ public class University {
 	
 	public void printAllStudents(Scanner scanner) {
 		for (int i = 0; i < students.size(); i++) {
-			System.out.println("1: " + students.get(i));
+			System.out.println((i + 1) + ": " + students.get(i));
 		}
 	}
 	
 	public void printStudent(Scanner scanner) {
+		int index = 0;
 		for (int i = 0; i < students.size(); i++) {
-			System.out.println(students.get(i));
+			System.out.println((i + 1) + ": " + students.get(i).getId());
 		}
+		System.out.println("Welcher Student?");
+		while ((index = scanner.nextInt()) < 1 || index > students.size()) {
+			scanner.nextLine();
+			System.out.println("ungueltige Eingabe");
+			System.out.println("Welcher Student?");
+		}
+		scanner.nextLine();
+		System.out.println(students.get(index - 1).getDetailInformation());
 	}
 	
 	public void editStudent(Scanner scanner) {
+		int index = 0;
+		for (int i = 0; i < students.size(); i++) {
+			System.out.println((i + 1) + ": " + students.get(i).getId());
+		}
+		System.out.println("Welcher Student?");
+		while ((index = scanner.nextInt()) < 1 || index > students.size()) {
+			scanner.nextLine();
+			System.out.println("ungueltige Eingabe");
+			System.out.println("Welcher Student?");
+		}
+		scanner.nextLine();
+		index --;
 		
+		
+		System.out.println("Was moechten Sie tun?");
+		System.out.println("1 - Nachname aendern");
+		System.out.println("2 - Vorname aendern");
+		System.out.println("3 - E-Mail aendern");
+		System.out.println("4 - Note eintragen");
+		System.out.println("5 - zurueck");
+		
+		int choice = 0;
+		while ((choice = scanner.nextInt()) != 5) {
+			scanner.nextLine();
+			switch (choice) {
+			case 1:
+				System.out.println("Eingabe machen: ");
+				students.get(index).setLastName(scanner.nextLine());
+				System.out.println(students.get(index).toString() + " geaendert");
+				break;
+			case 2:
+				System.out.println("Eingabe machen: ");
+				students.get(index).setFirstName(scanner.nextLine());
+				System.out.println(students.get(index).toString() + " geaendert");
+				break;
+			case 3:
+				System.out.println("Eingabe machen: ");
+				students.get(index).seteMail(scanner.nextLine());
+				System.out.println(students.get(index).toString() + " geaendert");
+				break;
+			case 4:
+				editGrade(scanner, index);
+				break;
+
+			default:
+				break;
+			}
+			System.out.println("Was moechten Sie tun?");
+			System.out.println("1 - Nachname aendern");
+			System.out.println("2 - Vorname aendern");
+			System.out.println("3 - E-Mail aendern");
+			System.out.println("4 - Note eintragen");
+			System.out.println("5 - zurueck");
+		}
+	}
+	
+	public void editGrade(Scanner scanner, int index) {
+		Student student = students.get(index);
+		for (int i = 0; i < student.getClasses().size(); i++) {
+			System.out.println((i + 1) + ": " + student.getClasses().get(i));
+		}
+		
+		System.out.println("Welcher Kurs?");
+		while ((index = scanner.nextInt()) < 1 || index > student.getClasses().size()) {
+			scanner.nextLine();
+			System.out.println("ungueltige Eingabe");
+			System.out.println("Welcher Kurs?");
+		}
+		index--;
+		
+		double grade = 0.0;
+		System.out.println("Note eingeben:");
+		while ((grade = scanner.nextDouble()) < 1.0 || grade > 6.0) {
+			scanner.nextLine();
+			System.out.println("ungueltige Eingabe");
+			System.out.println("Note eingeben:");
+		}
+		student.getClasses().get(index).setGrade(grade);
+		System.out.println(student + " Note eingetragen");
 	}
 
 	public void addStudent(Scanner scanner) {
@@ -122,7 +209,7 @@ public class University {
 		System.out.println("2: Wirtschaftsinformatik (Master)");
 		System.out.println("3: Allgemeine Informatik (Bachelor)");
 		System.out.println("Studiengang: ");
-		while ((courseNumber = scanner.nextInt()) < 1 && courseNumber > 3) {
+		while ((courseNumber = scanner.nextInt()) < 1 || courseNumber > 3) {
 			scanner.nextLine();
 			System.out.println("ungueltiger Studiengang");
 			System.out.println("1: Wirtschaftsinformatik (Bachelor)");
