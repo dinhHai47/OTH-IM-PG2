@@ -1,17 +1,44 @@
 Charpter 1:
 - Added a simple "Hello World" for testing java in the terminal
-- Added Exercise as docx and pdf
+- Added exercises as docx and pdf
 
 Charpter 2:
 - Replaced all float type with double, cause it´s more recommended
-- Added Exercises as docx and pdf
+- Added exercises as docx and pdf
 
 Charpter 3:
 - Rewrote convert-Method of 3_1
 - Extended 3_3
-- Added Exercises as docx and pdf
+- Added exercises as docx and pdf
+
+Charpter 4:
+- Fixed language
+- Added exercises as docx and pdf
+
+Charpter 5:
+- Complete Rewrote of 5_1
+- fixed Problems in 5_2
+- Major changes in 5_3
+- Added exercises as docx and pdf
+
+Charpter 6:
+- Complete Rewrote of analyzer in 6_2
+- Added exercises as docx and pdf
 
 Charpter 9:
 - Rewrote 3_9 because the implementation did not make sense
 - various changes
-- Added Exercises as docx and pdf
+- Added exercises as docx and pdf
+
+Charpter 10:
+- shorted implementation of 10_2
+- Added exercises as docx and pdf
+
+Charpter 11:
+- Added two new exercieses: 11_2 and 11_3 
+- Added exercises as docx and pdf
+
+Charpter 12:
+- Replaced 12_1 completle by a new exercise
+- Added one new exercies: 12_2 
+- Added exercises as docx and pdf
