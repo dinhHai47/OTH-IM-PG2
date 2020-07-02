@@ -22,6 +22,7 @@ Charpter 5:
 - Added exercises as docx and pdf
 
 Charpter 6:
+- Rewrote 6_1 because it did not make any sense
 - Complete Rewrote of analyzer in 6_2
 - Added exercises as docx and pdf
 
