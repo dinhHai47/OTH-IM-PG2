@@ -30,23 +30,23 @@ public class Rectangle {
 	 * 
 	 * @return area of this rectangle
 	 */
-	protected double calculateArea() {
+	public double calculateArea() {
 		return this.width * this.height;
 	}
 
-	protected double getWidth() {
+	public double getWidth() {
 		return this.width;
 	}
 
-	protected void setWidth(double width) {
+	public void setWidth(double width) {
 		this.width = width;
 	}
 
-	protected double getHeight() {
+	public double getHeight() {
 		return height;
 	}
 
-	protected void setHeight(double height) {
+	public void setHeight(double height) {
 		this.height = height;
 	}
 }
