@@ -1,65 +1,67 @@
 package uebung_11_2;
 
-import java.util.Arrays;
-
 public class MergeSort {
+	int numbers[];
 
-	public MergeSort() {
-
+	public MergeSort(int numbers[]) {
+		this.numbers = numbers;
 	}
 
 	/*
-	 * Divide and conquer: The number-array is divided by half as long as it contains more then one number.
+	 * Divide and conquer: The number-array is divided by half as long as it
+	 * contains more then one number.
 	 */
-	public int[] mergeSort(int numbers[]) {
-		if (numbers.length > 1) {
-			int firstHalf[] = new int[numbers.length / 2];
-			int secondHalf[] = new int[numbers.length / 2];
-			firstHalf = Arrays.copyOfRange(numbers, 0, numbers.length / 2);
-			secondHalf = Arrays.copyOfRange(numbers, numbers.length / 2, numbers.length);
-			firstHalf = mergeSort(firstHalf);
-			secondHalf = mergeSort(secondHalf);
-			return merge(firstHalf, secondHalf);
-		}
-		else {
-			return numbers;
+	private void mergeSort(int low, int high) {
+		if (low < high) {
+			int mid = (low + high) / 2;
+			mergeSort(low, mid);
+			mergeSort(mid + 1, high);
+			merge(low, mid, high);
 		}
 	}
 
-	//Merge the two sorted arrays in in sorted array and return it.
-	private int[] merge(int left[], int right[]) {
-		int leftCounter = 0;
-		int rightCounter = 0;
+	// Merge the two sorted arrays in in sorted array and write that part back to
+	// the original array.
+	private void merge(int low, int mid, int high) {
+		int lowCounter = low;
+		int highCounter = mid + 1;
 		int sortedCounter = 0;
-		int sorted[] = new int[left.length + right.length];
+		int sortedNumbers[] = new int[high - low + 1];
 
-		while (leftCounter < left.length && rightCounter < right.length) {
-			if (left[leftCounter] <= right[rightCounter]) {
-				sorted[sortedCounter] = left[leftCounter];
-				sortedCounter++;
-				leftCounter++;
+		while (lowCounter <= mid && highCounter <= high) {
+			if (numbers[lowCounter] > numbers[highCounter]) {
+				sortedNumbers[sortedCounter] = numbers[highCounter];
+				highCounter++;
 			}
 			else {
-				sorted[sortedCounter] = right[rightCounter];
-				sortedCounter++;
-				rightCounter++;
+				sortedNumbers[sortedCounter] = numbers[lowCounter];
+				lowCounter++;
 			}
+			sortedCounter++;
 		}
 
-		if (leftCounter == left.length) {
-			for (int i = rightCounter; i < right.length; i++) {
-				sorted[sortedCounter] = right[i];
-				sortedCounter++;
-			}
+		while (lowCounter <= mid) {
+			sortedNumbers[sortedCounter] = numbers[lowCounter];
+			lowCounter++;
+			sortedCounter++;
 		}
 
-		else {
-			for (int i = leftCounter; i < left.length; i++) {
-				sorted[sortedCounter] = left[i];
-				sortedCounter++;
-			}
+		while (highCounter <= high) {
+			sortedNumbers[sortedCounter] = numbers[highCounter];
+			highCounter++;
+			sortedCounter++;
 		}
+		int counter = low;
+		for (int i = 0; i < sortedNumbers.length; i++) {
+			numbers[counter] = sortedNumbers[i];
+			counter++;
+		}
+	}
 
-		return sorted;
+	public int[] sort() {
+		if (numbers != null) {
+			mergeSort(0, numbers.length - 1);
+		}
+		return numbers;
 	}
 }

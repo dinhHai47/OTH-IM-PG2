@@ -15,7 +15,7 @@ public class StartBubbleSort {
 
 		BubbleSort bubbleSort = new BubbleSort();
 
-		//Time measurement how long it takes to sort the array
+		// Time measurement how long it takes to sort the array
 		double time = System.currentTimeMillis();
 		bubbleSort.bubbleSort(numbers);
 		time = System.currentTimeMillis() - time;
@@ -26,7 +26,7 @@ public class StartBubbleSort {
 
 	}
 
-	//prints the number-array
+	// prints the number-array
 	public static void printArray(int numbers[]) {
 		for (int i = 0; i < numbers.length; i++) {
 			System.out.print(numbers[i] + ", ");
@@ -34,7 +34,7 @@ public class StartBubbleSort {
 		System.out.println();
 	}
 
-	//generates random numbers between 0 and 99
+	// generates random numbers between 0 and 99
 	public static void generateRandomNumbers(int numbers[], int count, Random random) {
 		for (int i = 0; i < count; i++) {
 			numbers[i] = random.nextInt(100);

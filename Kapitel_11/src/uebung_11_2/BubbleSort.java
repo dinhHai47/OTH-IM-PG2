@@ -6,7 +6,7 @@ public class BubbleSort {
 
 	}
 
-	//The bubbleSort algorithm
+	// The bubbleSort algorithm
 	public void bubbleSort(int numbers[]) {
 		boolean finished = true;
 		for (int i = 0; i < numbers.length; i++) {
