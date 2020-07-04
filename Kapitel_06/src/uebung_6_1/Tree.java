@@ -9,19 +9,19 @@ public class Tree {
 		this.height = height;
 	}
 
-	protected int getAge() {
+	public int getAge() {
 		return age;
 	}
 
-	protected void setAge(int age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 
-	protected int getHeight() {
+	public int getHeight() {
 		return height;
 	}
 
-	protected void setHeight(int height) {
+	public void setHeight(int height) {
 		this.height = height;
 	}
 
