@@ -51,8 +51,7 @@ public class CaesarCipher {
 	public static String encryptAlternative1(String text, int key) {
 		String output = "";
 
-		// Algorithmus: (P + K) mod 26, wobei P hier der zu verschlüsselnde Buchstabe
-		// und K der Key ist
+		// Algorithm: (P + K) mod 26, P is the letter to encrypt and K the key
 		for (char c : text.toCharArray()) {
 			int encryptedC = (((c - 'a') + key) % 26) + 'a';
 			output += (char) encryptedC;
@@ -65,10 +64,10 @@ public class CaesarCipher {
 		String output = "";
 
 		for (char c : text.toCharArray()) {
-			// Umwandlung des derzeitigen Buchstabens der "startMessage" zu int
+			// convert current character to numeric value
 			int cInt = (int) c;
 			for (int i = 1; i <= key; i++) {
-				// Zyklische Verschiebung nach rechts
+				// cyclic shift to right
 				cInt++;
 				if (cInt == ('z' + 1)) {
 					cInt = 'z' + 1 - 26;
@@ -80,6 +79,7 @@ public class CaesarCipher {
 		return output;
 	}
 
+	// Algorithm: (P - K) mod 26, P is the letter to decrypt and K the key
 	public static String decryptAlternative1(String text, int key) {
 		String output = "";
 
@@ -98,10 +98,10 @@ public class CaesarCipher {
 		String output = "";
 
 		for (char c : text.toCharArray()) {
-			// Umwandlung des derzeitigen Buchstabens der "startMessage" zu int
+			// convert current character to numeric value
 			int cInt = (int) c;
 			for (int i = 1; i <= key; i++) {
-				// Zyklische Verschiebung nach links
+				// cyclic shift to right
 				cInt--;
 				if (cInt == ('a' - 1)) {
 					cInt = 'a' - 1 + 26;

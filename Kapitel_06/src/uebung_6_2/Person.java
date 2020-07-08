@@ -34,6 +34,7 @@ public class Person {
 
 	}
 
+	//Analyzing the first part by applying the pattern-rules for the first part
 	private void analyzeFirstPart(String firstPart) {
 		String sub_split_text[];
 		List<String> temp = getCorrectList(firstPart);
@@ -50,6 +51,7 @@ public class Person {
 		}
 	}
 
+	//Analyzing the other parts by applying the pattern-rules for all other parts
 	private void analyzeOtherParts(String part) {
 		String sub_split_text[];
 		List<String> temp = getCorrectList(part);
