@@ -26,6 +26,14 @@ Charpter 6:
 - Complete Rewrote of analyzer in 6_2
 - Added exercises as docx and pdf
 
+Charpter 7:
+- Changed structure of 7_2 so it makes more sense
+- Added exercises as docx and pdf
+
+Charpter 8:
+- Minor changes, shorted code
+- Added exercises as docx and pdf
+
 Charpter 9:
 - Rewrote 3_9 because the implementation did not make sense
 - various changes
@@ -33,6 +41,7 @@ Charpter 9:
 
 Charpter 10:
 - shorted implementation of 10_2
+- added 10_3
 - Added exercises as docx and pdf
 
 Charpter 11:
@@ -42,4 +51,12 @@ Charpter 11:
 Charpter 12:
 - Replaced 12_1 completle by a new exercise
 - Added one new exercies: 12_2 
+- Added exercises as docx and pdf
+
+Charpter 13:
+- Completely new implementation
+- Added exercises as docx and pdf
+
+Charpter 14:
+- Completely new charpter
 - Added exercises as docx and pdf
