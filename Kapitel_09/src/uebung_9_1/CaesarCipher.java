@@ -20,7 +20,7 @@ public class CaesarCipher {
 		for (char c : text.toCharArray()) {
 			int encryptedC = (((c - 'a') + key) % 26) + 'a';
 			output += (char) encryptedC;
-		}
+		} 1
 
 		return output;
 	}
